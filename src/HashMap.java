@@ -1,3 +1,5 @@
+import static java.lang.Math.*;
+
 public class HashMap {
     private static int size;
 
@@ -11,7 +13,7 @@ public class HashMap {
         int hash =
     }
 
-    public int convertCharToInt (char c){
+    private int convertCharToInt(char c){
         int result;
         switch (c){
             case 'a':
@@ -99,11 +101,12 @@ public class HashMap {
         return result;
     }
 
-    public int changeToBase26(String string){
+    private int changeToBase10(String string){
         int result = 0;
         char[] chars = string.toCharArray();
         for(int i = 0; i<chars.length; i++){
-            result += convertCharToInt(chars[chars.length - 1 - i]) * 26 ^ (i);
+            result += convertCharToInt(chars[chars.length - 1 - i]) * pow(26, i);
+
         }
         return result;
     }
