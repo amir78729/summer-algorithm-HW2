@@ -2,15 +2,42 @@ import static java.lang.Math.*;
 
 public class HashMap {
     private static int size;
+    private HashLink[] table;
 
     public HashMap(int size) {
         this.size = size;
+        table = new HashLink[size];
     }
 
-    private void hashFunc(){}
-
     public String get(String key){
-        int hash =
+        int hash = changeToBase10(key) % size;
+        if (table[hash] == null)
+            return null;
+        else{
+            HashLink entry = table[hash];
+            while (entry.getNext() != null && entry.getKey() != key)
+                entry = entry.getNext();
+            if (entry == null)
+                return "the word doesn't exist!";
+            else
+                return entry.getValue();
+        }
+    }
+
+    public void put(String key, String value){
+        int hash = changeToBase10(key) % size;
+        if (table[hash] == null){
+            table[hash] = new HashLink(key,value);
+        }
+        else {
+            HashLink entry = table[hash];
+            while (entry.getNext() != null && entry.getKey() != key)
+                entry = entry.getNext();
+            if (entry.getNext() == null) // check it again!
+                entry.setNext(new HashLink(key, value));
+            else
+                entry.setValue(value);
+        }
     }
 
     private int convertCharToInt(char c){
