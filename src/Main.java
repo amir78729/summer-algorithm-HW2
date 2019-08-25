@@ -17,7 +17,7 @@ public class Main {
                     System.out.println("search...");
                     break;
                 default:
-                    System.out.println("bad input!!");
+                    System.out.println("wrong input!!");
             }
             System.out.println("--------------------------");
         }
