@@ -15,6 +15,7 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("search...");
+
                     break;
                 default:
                     System.out.println("wrong input!!");
