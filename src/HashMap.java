@@ -4,7 +4,7 @@ public class HashMap {
     private static int size;
     private HashLink[] table;
 
-    public HashMap(int size) {
+    public HashMap() {
         this.size = size;
         table = new HashLink[size];
     }

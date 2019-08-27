@@ -168,7 +168,7 @@ public class WorkingWithFiles {
             e.printStackTrace();
         }
     }
-    private static void moveToAnotherTextFile(FileWriter fileWriter, Object string){
+    private static void moveToAnotherTextFile(FileWriter fileWriter, Object string){//neveshtan va khundan tu filesh ro ok kon!
         try {
             fileWriter.write(string + "\n");
             fileWriter.flush();
