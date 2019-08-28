@@ -168,9 +168,12 @@ public class WorkingWithFiles {
             e.printStackTrace();
         }
     }
-    private static void moveToAnotherTextFile(FileWriter fileWriter, Object string){//neveshtan va khundan tu filesh ro ok kon!
+    private static void moveToAnotherTextFile(FileWriter fileWriter, Object obj){//neveshtan va khundan tu filesh ro ok kon!
         try {
-            fileWriter.write(string + "\n");
+            if(obj instanceof String)
+                fileWriter.write(obj + "\n");
+            else
+                fileWriter.write((char[]) obj);///?????????????????
             fileWriter.flush();
         } catch (IOException e) {
             e.printStackTrace();

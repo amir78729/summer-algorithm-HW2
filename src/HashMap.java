@@ -4,7 +4,7 @@ public class HashMap {
     private static int size;
     private HashLink[] table;
 
-    public HashMap() {
+    public HashMap(int size) {
         this.size = size;
         table = new HashLink[size];
     }
@@ -12,7 +12,7 @@ public class HashMap {
     public String get(String key){
         int hash = changeToBase10(key) % size;
         if (table[hash] == null)
-            return null;
+            return "the word doesn't exist!";
         else{
             HashLink entry = table[hash];
             while (entry.getNext() != null && entry.getKey() != key)
