@@ -1,14 +1,16 @@
 import java.util.HashMap;
 //LRU algorithm
 public class Cache{
-    private HashMap<String, CacheNode> cashElements;
+    //private HashMap<String, CacheNode> cashElements;
+    private CacheMap cashElements;
     private final int capacity;
     private CacheNode head;
     private CacheNode tail;
 
     public Cache(int capacity) {
         this.capacity = capacity;
-        cashElements = new HashMap();
+        //cashElements = new HashMap();
+        cashElements = new CacheMap();
         head = null;
         tail = null;
     }
@@ -48,8 +50,9 @@ public class Cache{
 
     public void put(String key, String value){
         if(cashElements.containsKey(key)){
-            cashElements.get(key).setValue(value);
-            moveToHead(cashElements.get(key));
+            CacheNode temp = (CacheNode) cashElements.get(key);
+            temp.setValue(value);//maybe wrong!
+            moveToHead((CacheNode) cashElements.get(key));
             return;
         }
         CacheNode created = new CacheNode(key, value);
@@ -64,8 +67,8 @@ public class Cache{
 
     public CacheNode get(String key){
         if(cashElements.containsKey(key)) {
-            moveToHead(cashElements.get(key));
-            return cashElements.get(key);
+            moveToHead((CacheNode) cashElements.get(key));
+            return(CacheNode) cashElements.get(key);
         }
         else return null;
 

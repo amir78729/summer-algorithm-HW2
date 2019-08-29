@@ -26,7 +26,7 @@ public class LFUCache {
             LFUCacheNode temp = cacheMap.get(key);
             temp.setFrequency(temp.getFrequency() + 1);
             cacheMap.put(key, temp);
-            return temp.getKey();
+            return temp.getValue();
         }
         return null;
     }

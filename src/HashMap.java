@@ -1,7 +1,7 @@
 import static java.lang.Math.*;
 
 public class HashMap {
-    private static int size;
+    private  int size;
     private HashLink[] table;
 
     public HashMap(int size) {
@@ -10,6 +10,7 @@ public class HashMap {
     }
 
     public String get(String key){
+        System.out.println(size);
         int hash = changeToBase10(key) % size;
         if (table[hash] == null)
             return "the word doesn't exist!";
