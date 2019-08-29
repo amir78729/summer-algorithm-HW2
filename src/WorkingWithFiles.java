@@ -253,4 +253,46 @@ public class WorkingWithFiles {
             e.printStackTrace();
         }
     }
+
+    public static void splitWithDoNoghte( HashMap map, FileReader fr  ) throws IOException {
+        BufferedReader br = new BufferedReader(fr);
+        String line;
+        while ((line = br.readLine()) != null)
+        {
+            String[] parts = line.split(":", 2);
+            if (parts.length >= 2)
+            {
+                String key = parts[0];
+                String value = parts[1];
+                map.put(key, value);
+            } else {
+                System.out.println("ignoring line: " + line);
+            }
+        }
+        br.close();
+    }
+
+    public static void splitWithNewLine( HashMap map, FileReader fr  ) throws IOException {
+        BufferedReader br = new BufferedReader(fr);
+        String line;
+        boolean keyInserted = false;
+        ArrayList<String> keys = new ArrayList<>();
+        ArrayList<String> values = new ArrayList<>();
+        while ((line = br.readLine()) != null) {
+            if (!keyInserted) {
+                keys.add(line);
+            } else {
+                values.add(line);
+            }
+            keyInserted = !keyInserted;
+        }
+
+        if (keys.size() == values.size()) {
+            for (int i = 0; i < keys.size(); i++) {
+                map.put(keys.get(i), values.get(i));
+            }
+        } else
+            System.out.println("wrong txt file format!!!");
+        br.close();
+    }
 }

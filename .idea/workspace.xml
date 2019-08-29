@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="921a5572-a957-40bd-9540-5682b7ffc7e9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WorkingWithFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkingWithFiles.java" afterDir="false" />
     </list>
@@ -48,8 +47,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/WorkingWithFiles.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1909">
-              <caret line="109" column="62" lean-forward="true" selection-start-line="109" selection-start-column="62" selection-end-line="109" selection-end-column="62" />
+            <state relative-caret-position="403">
+              <caret line="294" column="59" selection-start-line="294" selection-start-column="59" selection-end-line="294" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -189,7 +188,7 @@
       <workItem from="1566760138127" duration="2872000" />
       <workItem from="1566883835130" duration="7001000" />
       <workItem from="1566918482908" duration="3808000" />
-      <workItem from="1567070164912" duration="4391000" />
+      <workItem from="1567070164912" duration="6181000" />
     </task>
     <task id="LOCAL-00001" summary="converting to base 26 function added">
       <created>1566761174500</created>
@@ -205,11 +204,18 @@
       <option name="project" value="LOCAL" />
       <updated>1566762355296</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fileOutputStreams added">
+      <created>1567076698908</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1567076698920</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26543000" />
+    <option name="totallyTimeSpent" value="28333000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -282,7 +288,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="converting to base 26 function added" />
     <MESSAGE value="convertToBase10()'s bugs fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="convertToBase10()'s bugs fixed" />
+    <MESSAGE value="fileOutputStreams added" />
+    <option name="LAST_COMMIT_MESSAGE" value="fileOutputStreams added" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Cache.java">
@@ -367,8 +374,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/WorkingWithFiles.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1909">
-          <caret line="109" column="62" lean-forward="true" selection-start-line="109" selection-start-column="62" selection-end-line="109" selection-end-column="62" />
+        <state relative-caret-position="403">
+          <caret line="294" column="59" selection-start-line="294" selection-start-column="59" selection-end-line="294" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
