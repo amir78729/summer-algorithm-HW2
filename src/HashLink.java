@@ -1,4 +1,6 @@
-public class HashLink {
+import java.io.Serializable;
+
+public class HashLink implements Serializable {
     private String key;
     private String value;
     private HashLink next;
@@ -32,4 +34,5 @@ public class HashLink {
     public void setNext(HashLink next) {
         this.next = next;
     }
+
 }

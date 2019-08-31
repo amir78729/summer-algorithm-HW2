@@ -1,4 +1,6 @@
-public class CacheNode {
+import java.io.Serializable;
+
+public class CacheNode implements Serializable {
     private String key;
     private String value;
     private CacheNode next;
@@ -42,4 +44,5 @@ public class CacheNode {
     public void setPrev(CacheNode prev) {
         this.prev = prev;
     }
+
 }

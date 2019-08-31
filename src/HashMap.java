@@ -1,6 +1,8 @@
+import java.io.Serializable;
+
 import static java.lang.Math.*;
 
-public class HashMap {
+public class HashMap implements Serializable {
     private  int size;
     private HashLink[] table;
 
@@ -138,4 +140,5 @@ public class HashMap {
         }
         return result;
     }
+
 }

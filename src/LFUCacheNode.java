@@ -1,7 +1,10 @@
-public class LFUCacheNode {
+import java.io.Serializable;
+
+public class LFUCacheNode implements Serializable {
     private String key;
     private String value;
     private int frequency;
+
 
     public LFUCacheNode(String key, String value) {
         this.key = key;
@@ -32,4 +35,5 @@ public class LFUCacheNode {
     public void setFrequency(int frequency) {
         this.frequency = frequency;
     }
+
 }

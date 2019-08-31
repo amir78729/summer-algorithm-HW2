@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.HashMap;
 //LRU algorithm
-public class Cache{
+public class Cache implements Serializable {
     //private HashMap<String, CacheNode> cashElements;
     private CacheMap cashElements;
     private final int capacity;
@@ -28,7 +29,7 @@ public class Cache{
             tail = node;
         }
 
-            
+
     }
 
     public void moveToHead(CacheNode node){
@@ -73,5 +74,6 @@ public class Cache{
         else return null;
 
     }
+
 
 }

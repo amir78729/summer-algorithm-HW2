@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class CacheMap {
+public class CacheMap implements Serializable {
     private ArrayList nodes;
     private ArrayList<String> keys;
     public CacheMap() {
@@ -9,6 +10,10 @@ public class CacheMap {
     }
 
     public void put(String key, Object node){
+        if(keys.contains(key)){
+            nodes.add(keys.indexOf(key), node);
+            return;
+        }
         keys.add(key);
         nodes.add(node);
     }
@@ -32,6 +37,7 @@ public class CacheMap {
         return keys.size();
     }
 
+    public ArrayList getNodes(){return nodes;}
 
 
 }
